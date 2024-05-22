@@ -1,27 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>PI 1 2024</title>
-        <link href="./css/main.css" rel="stylesheet" />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
-    <body>
-        <nav>
-            <a href="#">Home</a>
-            <input type="text" placeholder="Pesquise o nome do bairro"/>
+
+<head>
+    <title>PI 1 2024</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="hero-image">
+        <nav class="container navbar">
+            <a href="index.html">
+                <img src="./assets//icons/material-symbols_home.svg" />
+            </a>
         </nav>
-        
-        <footer>
-            <header>
+
+        <section class="container">
+            <h1 class="neighborhood-name">Bairro - Centro</h1>
+
+            <div>
+                <figure>
+                    <img src="./assets/bairros/centro_1.png" alt="Bairro Image" />
+                    <figcaption>
+                        Data da imagem: 02/02/2024
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <section class="container neighborhood-info flex">
+        <div class="indice-pcv-default">
+            <div class="indice-pcv-title">Indice PCV</div>
+            <div class="indice-pcv-caption">PCV ideal para conforto térmico é <span>30%</span></div>
+        </div>
+        <div class="indice-pcv-neighborhood good-pcv">
+            <div class="indice-pcv-title">Indice do bairro</div>
+            <div class="indice-pcv-title">36,53%</div>
+        </div>
+    </section>
+
+    <section class="container about-neighborhood">
+
+        <h2 class="about-neighborhood-title">Sobre o bairro</h2>
+        <div class="about-neighborhood-card-grid flex">
+            <div class="flex about-neighborhood-card ">
+                <div class="about-icon">
+                    <img src="./assets/icons/uiw_area-chart.svg" />
+                </div>
+                <div class="total-area">
+                    <div>
+                        Área total
+                    </div>
+                    <div>
+                        200 m²
+                    </div>
+                </div>
+            </div>
+            <div class="flex about-neighborhood-card ">
+                <div class="about-icon">
+                    <img src="./assets/icons/ph_tree.svg" />
+                </div>
+                <div class="total-green-area">
+                    <div>
+                        Areas verdes totais
+                    </div>
+                    <div>
+                        50 m²
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <header class="footer-header flex">
                 <h3>Projetor Integador</h3>
-                <div>
+                <div class="footer-email-contact">
+                    <img src="./assets/icons/email-Vector.svg" />
                     <a href="">email@contato.com</a>
                 </div>
             </header>
             <section>
-                <h4>Informações</h4>
-                <ul>
+                <h4 class="footer-informations-title">Informações</h4>
+                <ul class="footer-informations-list">
                     <li>
                         <a href="#">
                             Contato
@@ -47,7 +119,9 @@
                     </li>
                 </ul>
             </section>
-        </footer>
-        </body>
-    </body>
+        </div>
+    </footer>
+</body>
+</body>
+
 </html>
