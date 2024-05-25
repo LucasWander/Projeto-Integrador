@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
+
     <div class="hero-image">
         <nav class="container navbar">
             <a href="index.html">
@@ -21,54 +23,65 @@
         </nav>
 
         <section class="container">
-            <h1 class="neighborhood-name">Bairros</h1>
+            <h1 class="neighborhood-name">Bairro - Chervezon</h1>
 
-            <div class="flex neightborhood-link-card-list">
-                <div class="neightborhood-link-card">
-                    <a href="bairro-centro.html">Centro
-                        <img src="assets/icons/icon-park-outline_next.svg" />
-                    </a>
-                </div>
-                <div class="neightborhood-link-card">
-                    <a href="bairro-chervezon.html">Chervezon
-                        <img src="assets/icons/icon-park-outline_next.svg" />
-                    </a>
-                </div>
-                <div class="neightborhood-link-card">
-                    <a href="bairro-floridiana.html">Floridiana
-                        <img src="assets/icons/icon-park-outline_next.svg" />
-                    </a>
-                </div>
+            <div>
+                <figure>
+                    <img src="./assets/bairros/centro_1.png" alt="Bairro Image" />
+                    <figcaption>
+                        Data da imagem: 02/02/2024
+                    </figcaption>
+                </figure>
             </div>
         </section>
     </div>
-    <section>
-        <div class="container about-project">
 
-            <header>
-                <h2 class="about-neighborhood-title">Sobre o Projeto</h2>
-            </header>
-            <div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aspernatur, incidunt quas et
-                    at velit tempore facere. Reiciendis architecto ab amet, deleniti in, ducimus veritatis, impedit quam
-                    vitae iusto rem.
-                </p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aspernatur, incidunt quas et
-                    at velit tempore facere. Reiciendis architecto ab amet, deleniti in, ducimus veritatis, impedit quam
-                    vitae iusto rem.
-                </p>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aspernatur, incidunt quas et
-                    at velit tempore facere. Reiciendis architecto ab amet, deleniti in, ducimus veritatis, impedit quam
-                    vitae iusto rem.
-                </p>
-            </div>
+    <section class="container neighborhood-info flex">
+        <div class="indice-pcv-default">
+            <div class="indice-pcv-title">Indice PCV</div>
+            <div class="indice-pcv-caption">PCV ideal para conforto térmico é <span>30%</span></div>
+        </div>
+        <div class="indice-pcv-neighborhood bad-pcv">
+            <div class="indice-pcv-title">Indice do bairro</div>
+            <div class="indice-pcv-title">7,82%</div>
         </div>
     </section>
+
+    <section class="container about-neighborhood">
+
+        <h2 class="about-neighborhood-title">Sobre o bairro</h2>
+        <div class="about-neighborhood-card-grid flex">
+            <div class="flex about-neighborhood-card ">
+                <div class="about-icon">
+                    <img src="./assets/icons/uiw_area-chart.svg" />
+                </div>
+                <div class="total-area">
+                    <div>
+                        Área total
+                    </div>
+                    <div>
+                        0,808 m²
+                    </div>
+                </div>
+            </div>
+            <div class="flex about-neighborhood-card ">
+                <div class="about-icon">
+                    <img src="./assets/icons/ph_tree.svg" />
+                </div>
+                <div class="total-green-area">
+                    <div>
+                        Areas verdes totais
+                    </div>
+                    <div>
+                        0,068 m²
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
     <footer>
         <div class="container">
             <header class="footer-header flex">
