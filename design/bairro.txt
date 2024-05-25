@@ -1,0 +1,20 @@
+Centro:
+Area total: 1,76KM²
+Area verde total: 0,074
+Número de pixels polígono: 90644
+Número de pixels área verde: 3854
+Índice: 4.08 %
+
+Chervezon:
+AREA: 0,808KM²
+Area verde total: 0,068
+Número de pixels polígono: 208080
+Número de pixels área verde: 17650
+Índice: 7.82 %
+
+Floridiana:
+Area total: 0,253KM²
+Area verde total: 0,030
+Número de pixels polígono: 165942
+Número de pixels área verde: 20343
+Índice: 10.92 %
