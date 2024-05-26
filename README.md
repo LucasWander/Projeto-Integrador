@@ -1,1 +1,3 @@
- # Projetor Integrador 1 - 2024
+# Projetor Integrador 1 - 2024
+
+Este site consiste em uma ferramenta web para apresentar os índices de cobertura vegetal de alguns bairros do Município de Rio Claro, utilizando imagens de satélite do Google Earth e dados populacionais municipais. Para tanto, o índice considerado foi a Porcentagem de Cobertura Vegetal (PCV). O objetivo principal é melhorar a qualidade de vida na cidade, focando na arborização.
