@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5e05d4fbc9bbeb459d9a8922cff4e928 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5e05d4fbc9bbeb459d9a8922cff4e928" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5e05d4fbc9bbeb459d9a8922cff4e928 = L.map(
+                "map_5e05d4fbc9bbeb459d9a8922cff4e928",
+                {
+                    center: [-22.38033, -47.55965],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4ed9f017c88c09a35a16ff916d27bf37 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5e05d4fbc9bbeb459d9a8922cff4e928);
+        
+    
+        function geo_json_11d5ea080b13daed42daab93db73ada5_styler(feature) {
+            switch(feature.properties.CD_GEOCODI) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.25, "opacity": 1};
+            }
+        }
+
+        function geo_json_11d5ea080b13daed42daab93db73ada5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_11d5ea080b13daed42daab93db73ada5 = L.geoJson(null, {
+                onEachFeature: geo_json_11d5ea080b13daed42daab93db73ada5_onEachFeature,
+            
+                style: geo_json_11d5ea080b13daed42daab93db73ada5_styler,
+        });
+
+        function geo_json_11d5ea080b13daed42daab93db73ada5_add (data) {
+            geo_json_11d5ea080b13daed42daab93db73ada5
+                .addData(data)
+                .addTo(map_5e05d4fbc9bbeb459d9a8922cff4e928);
+        }
+            geo_json_11d5ea080b13daed42daab93db73ada5_add({"crs": {"properties": {"name": "urn:ogc:def:crs:EPSG::3395"}, "type": "name"}, "features": [{"geometry": {"coordinates": [[[-47.5592619, -22.3742915], [-47.5594203, -22.3782355], [-47.5626818, -22.3785628], [-47.5641302, -22.3788009], [-47.5637333, -22.3821343], [-47.5636689, -22.3823724], [-47.562891, -22.3843317], [-47.5619684, -22.3863356], [-47.5618541, -22.3867422], [-47.5617214, -22.3869852], [-47.5616463, -22.3871923], [-47.5619359, -22.3849751], [-47.5572423, -22.3859721], [-47.5556128, -22.3791364], [-47.5549798, -22.3764528], [-47.5546793, -22.3747067], [-47.5547544, -22.3742007], [-47.5547236, -22.3737359], [-47.5592619, -22.3742915]]], "type": "Polygon"}, "properties": {"CD_GEOCODB": "354390705011", "CD_GEOCODD": "354390705", "CD_GEOCODI": "354390705000115", "CD_GEOCODM": "3543907", "CD_GEOCODS": "35439070500", "ID": 101196.0, "ID1": 35629, "NM_BAIRRO": "Jardim Floridiana", "NM_DISTRIT": "RIO CLARO", "NM_MESO": "PIRACICABA", "NM_MICRO": "RIO CLARO", "NM_MUNICIP": "RIO CLARO", "NM_SUBDIST": null, "TIPO": "URBANO"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var tile_layer_b3cebdac24bd4f5f2e7f2ca1b669477e = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false, "zoomStart": 16}
+            ).addTo(map_5e05d4fbc9bbeb459d9a8922cff4e928);
+        
+    
+            var tile_layer_cc5bb304045041fabd094f352ee3d9a4 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false, "zoomStart": 16}
+            ).addTo(map_5e05d4fbc9bbeb459d9a8922cff4e928);
+        
+    
+            var layer_control_ba3b05516be0e6fbe281a76e6d37eb9d = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_4ed9f017c88c09a35a16ff916d27bf37,
+                    "cartodbpositron" : tile_layer_b3cebdac24bd4f5f2e7f2ca1b669477e,
+                    "Esri.WorldImagery" : tile_layer_cc5bb304045041fabd094f352ee3d9a4,
+                },
+                overlays :  {
+                    "macro_element_11d5ea080b13daed42daab93db73ada5" : geo_json_11d5ea080b13daed42daab93db73ada5,
+                },
+            };
+            L.control.layers(
+                layer_control_ba3b05516be0e6fbe281a76e6d37eb9d.base_layers,
+                layer_control_ba3b05516be0e6fbe281a76e6d37eb9d.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_5e05d4fbc9bbeb459d9a8922cff4e928);
+            tile_layer_b3cebdac24bd4f5f2e7f2ca1b669477e.remove();
+            tile_layer_cc5bb304045041fabd094f352ee3d9a4.remove();
+        
+</script>
+</html>
