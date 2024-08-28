@@ -1,5 +1,10 @@
 # Django Project
 
+## TODOS
+
+- [ ] Add docker composer
+- [ ] Add docker volume to backup the database
+
 Enable virtual environment
 
 ```bash
