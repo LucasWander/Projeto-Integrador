@@ -23,24 +23,19 @@
 
         <section class="container">
             <h1 class="neighborhood-name">Bairros</h1>
-
+            {% if neighborhoods %}
             <div class="flex neightborhood-link-card-list">
+                {% for neighborhood in neighborhoods %}
                 <div class="neightborhood-link-card">
-                    <a href="bairro-centro.html">Centro
+                    <a href='bairros/{{neighborhood.id}}'>{{neighborhood.name}}
                         <img src="{% static 'green_area/assets/icons/icon-park-outline_next.svg'%}" />
                     </a>
                 </div>
-                <div class="neightborhood-link-card">
-                    <a href="bairro-chervezon.html">Chervezon
-                        <img src="{% static 'green_area/assets/icons/icon-park-outline_next.svg'%}" />
-                    </a>
-                </div>
-                <div class="neightborhood-link-card">
-                    <a href="bairro-floridiana.html">Floridiana
-                        <img src="{% static 'green_area/assets/icons/icon-park-outline_next.svg'%}" />
-                    </a>
-                </div>
+                {% endfor %}
+            {% else %}
+            <p>Nenhum bairro disponível</p>                
             </div>
+            {% endif %}
         </section>
     </div>
     <section>
@@ -50,6 +45,7 @@
                 <h2 class="about-neighborhood-title">Sobre o Projeto</h2>
             </header>
             <div>
+                <p>{{neighborhoods}}</p>
                 <p>
                     Este site consiste em uma ferramenta web para apresentar os índices de cobertura vegetal de alguns bairros do Município de Rio Claro, utilizando imagens de satélite do Google Earth e dados populacionais municipais. Para tanto, o índice considerado foi a Porcentagem de Cobertura Vegetal (PCV). O objetivo principal é melhorar a qualidade de vida na cidade, focando na arborização.
                 </p>
