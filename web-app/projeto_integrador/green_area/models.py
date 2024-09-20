@@ -12,7 +12,7 @@ class Neighborhood(models.Model):
 class Neighborhood_Image(models.Model):
   neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE)
   image_link = models.CharField(max_length=500)
-  description = models.CharField(max_length=30)
+  description = models.CharField(max_length=40)
 
 
 
