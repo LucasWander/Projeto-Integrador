@@ -3,6 +3,7 @@ from django.http import Http404
 from django.template import loader
 
 from .models import Neighborhood
+from .models import Neighborhood_Image
 
 # Create your views here.
 def index(request):
@@ -24,11 +25,14 @@ def neighborhoodDetail(request, neighborhood_id):
 
   try:
     neighborhood = Neighborhood.objects.get(pk=neighborhood_id)
+    images = Neighborhood_Image.objects.filter(neighborhood=neighborhood_id)
   except Neighborhood.DoesNotExist:
         raise Http404("Question does not exist")
-
+  print(images)
   context = {
-    "neighborhood": neighborhood  
+    "neighborhood": neighborhood,
+    "images" : images,
+    "numberOfImages": len(images)
   }
 
   return HttpResponse(template.render(context, request))
