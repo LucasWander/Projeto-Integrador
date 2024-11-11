@@ -11,10 +11,30 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
+.go-home {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration:double;
+}
+
+
+.go-home span {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+}
+
+
+.navbar {
+    margin-bottom: 5rem !important;
+}
+
+
 .navbar img {
     display: inline-block;
     margin-top: 1rem;
-    margin-bottom: 5rem;
 }
 
 .hero-image {
@@ -32,7 +52,7 @@ img {
 .container {
     width: 90%;
     max-width: 1300px;
-    margin: auto;
+    margin: 0 auto 0 auto;
 }
 
 .flex {
@@ -53,9 +73,6 @@ img {
     gap: 0.9rem;
 }
 
-.neightborhood-link-card {
-    border: 1px solid black;
-}
 
 .neighborhood-info {
     margin-top: 28em;
@@ -87,10 +104,15 @@ img {
     }
 }
 
-
+.detail-neighborhood {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 .neightborhood-link-card-list a {
+    width: 100%;
     text-decoration: none;
     color: #13242A;
 }
@@ -104,7 +126,10 @@ img {
     background-color: #fff;
     padding: 2rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.3rem;
+    border-left: 20px solid #13242A;
+    color: #13242A;
+
 }
 
 .neighborhood-name {
