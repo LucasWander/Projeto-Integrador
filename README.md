@@ -1,4 +1,4 @@
-# Projetor Integrador 1 - 2024
+# Projetor Integrador - 2024
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/LucasWander/Projeto-Integrador-1?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/LucasWander/Projeto-Integrador-1?style=for-the-badge)
