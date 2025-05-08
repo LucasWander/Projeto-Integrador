@@ -5,7 +5,14 @@
 - [ ] Add docker composer
 - [ ] Add docker volume to backup the database
 
-Enable virtual environment
+## How to run the project locally
+
+```bash
+# Install pip
+sudo apt install python3.10-venv
+```
+
+### Enable virtual environment
 
 ```bash
 # Creates the virtual environment
@@ -18,30 +25,36 @@ source .venv/django-project/bin/activate
 python -m pip install -r requirements.txt
 ```
 
+### Run the docker compose(Make sure that docker is installed)
+
+```bash
+docker compose up -d
+```
+
+### Create a .env file following the .example.env
+
+### Run the migrations
+
+```bash
+python manage.py migrate
+```
+
+### Start dev Server
+
+```bash
+python manage.py runserver
+```
+
+### On Other terminal windows run the command
+
+```bash
+python manage.py createsuperuse
+```
+
+## Others
+
 If a new package is installed please run the command
 
 ```bash
 python -m pip freeze > requirements.txt
-```
-
-### Docker
-
-#### Postgress
-
-Pull image
-
-```bash
-docker pull postgres:16.4
-```
-
-Start container
-
-```bash
-docker run --name green-area -p 5432:5432 -e POSTGRES_USER=Freckled5 -e POSTGRES_DB=green_area -e POSTGRES_PASSWORD=**************** -d postgres
-```
-
-Connect to the database inside the docker container
-
-```bash
-psql -d green_area -U Freckled5
 ```

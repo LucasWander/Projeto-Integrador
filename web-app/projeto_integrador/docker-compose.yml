@@ -7,3 +7,8 @@ services:
       - POSTGRES_USER=green-area
       - POSTGRES_PASSWORD=green-area
       - POSTGRES_DB=green-area
+    volumes:
+      - green_area_database:/bitnami/postgresql
+
+volumes:
+    green_area_database:
