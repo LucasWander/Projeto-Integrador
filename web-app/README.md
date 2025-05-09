@@ -39,13 +39,19 @@ docker compose up -d
 python manage.py migrate
 ```
 
+### Run this command to create the fake data
+
+```bash
+python manage.py mock_data
+```
+
 ### Start dev Server
 
 ```bash
 python manage.py runserver
 ```
 
-### On Other terminal windows run the command
+### On Other terminal window run the command
 
 ```bash
 python manage.py createsuperuse
