@@ -14,9 +14,24 @@ async function main() {
 
     const app = fastify();
 
-    app.get('/neighborhood', async (req, res) => {
+    app.get<{
+        Querystring: {
+            pcvSmaller: number
+        }
+    }>('/neighborhood', async (req, res) => {
+        console.log(req.query);
 
-        const data = await client.query("SELECT * FROM green_area_neighborhood");
+        const query = "SELECT * FROM green_area_neighborhood";
+        let data;
+
+        if(req.query.pcvSmaller){
+            const pcvSmaller = req.query.pcvSmaller;
+            data = await client.query("SELECT * FROM green_area_neighborhood WHERE pcv_index < $1", [pcvSmaller]);
+        }
+        else {
+            data = await client.query(query);
+        }
+        
         return res.send(data.rows);
     });
 
@@ -32,4 +47,6 @@ async function main() {
 }
 
 
-main().then()
+main().then(() => {
+    console.log("Server running on: http://localhost:3000/neighborhood");
+})
