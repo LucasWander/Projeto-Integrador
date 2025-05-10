@@ -16,29 +16,72 @@ async function main() {
 
     app.get<{
         Querystring: {
-            pcvSmaller: number
+            pcvSmaller: number,
+            pcvBigger: number,
+            areaBigger: number,
+            areaSmaller: number,
+            greenAreaBigger: number,
+            greenAreaSmaller: number
         }
     }>('/neighborhood', async (req, res) => {
-        console.log(req.query);
 
-        const query = "SELECT * FROM green_area_neighborhood";
+        let query = "SELECT * FROM green_area_neighborhood WHERE 1=1";
+        const whereValues = [];
+        let index = 1;
         let data;
+        if(req.query.pcvBigger){
+            const pcvBigger = req.query.pcvBigger;
+            query += ` AND pcv_index >= $${index++}`;
+            whereValues.push(pcvBigger);
+        }
 
         if(req.query.pcvSmaller){
             const pcvSmaller = req.query.pcvSmaller;
-            data = await client.query("SELECT * FROM green_area_neighborhood WHERE pcv_index < $1", [pcvSmaller]);
-        }
-        else {
-            data = await client.query(query);
+            query += ` AND pcv_index <= $${index++}`;
+            whereValues.push(pcvSmaller);
         }
         
-        return res.send(data.rows);
+
+        if(req.query.areaBigger) {
+            const areaBigger = req.query.areaBigger;
+            query += ` AND total_area >= $${index++}`;
+            whereValues.push(areaBigger);
+        }
+
+        if(req.query.areaSmaller) {
+            const areaSmaller = req.query.areaSmaller;
+            query += ` AND total_area <= $${index++}`;
+            whereValues.push(areaSmaller);
+        }
+
+        if(req.query.greenAreaBigger) {
+            const greenAreaBigger = req.query.greenAreaBigger;
+            query += ` AND total_green_area > $${index++}`;
+            whereValues.push(greenAreaBigger);
+        }
+
+        if(req.query.greenAreaBigger) {
+            const greenAreaBigger = req.query.greenAreaBigger;
+            query += ` AND total_green_area > $${index++}`;
+            whereValues.push(greenAreaBigger);
+        }
+        
+        console.log(index);
+
+        if(whereValues.length)
+            data = await client.query(query, whereValues);
+        else
+            data = await client.query(query);
+
+        
+        
+        return {data: data.rows};
     });
 
     app.get('/neighborhood/:id', async (req: FastifyRequest<{ Params: { id: string } }>, res) => {
         const {id} = req.params;
         const data = await client.query("SELECT * FROM green_area_neighborhood WHERE id = $1",[id]);
-        return res.send(data.rows[0]);
+        return data.rows[0];
     });
 
     app.listen({
